@@ -1,0 +1,66 @@
+/*===reset css===*/
+/*选择到所有的标签和伪类元素*/
+*,
+::before,
+::after{
+    /*防止溢出*/
+    box-sizing: border-box;/*让盒子的大小设置从边框开始计算*/
+    -webkit-box-sizing: border-box;
+    /*点击高亮*/
+    -webkit-tap-highlight-color: transparent;
+
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-size: 14px;
+    font-family: 'Microsoft YaHei',sans-serif;
+}
+
+a{
+    color: #333;
+    text-decoration: none;
+}
+
+ul,ol{
+    list-style: none;
+}
+
+input[type="text"],input[type="search"],textarea{
+    border: none;
+    outline: none;
+    resize: none;
+    /*清除默认样式*/
+    -webkit-appearance: none;
+}
+/*===common css===*/
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+.clearfix::before,
+.clearfix::after{
+    content: "";
+    display: block;
+    visibility: hidden;
+    height: 0;
+    line-height: 0;
+    clear: both;
+}
+
+.m_l10{
+    margin-left: 10px;
+}
+.m_r10{
+    margin-right: 10px;
+}
+
+/*选着图标*/
+[class^="icon_"],[class*=" icon_"]{
+    background-image: url("../images/sprites.png");
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
+}
